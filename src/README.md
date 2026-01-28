@@ -1,123 +1,133 @@
 # Vizly Analytics Dashboard
 
-A modern, feature-rich analytics dashboard built with React, TypeScript, and Tailwind CSS. Complete redesign with production-ready architecture.
+A modern, clean, and responsive analytics dashboard built with React, TypeScript, Tailwind CSS v4, and CSS Modules. Focused on delivering an improved UX with minimalist design and AI-powered insights.
 
-## 🎨 Complete Redesign
+## 🎨 Design Philosophy
 
-This is a **complete, modern redesign** of the Vizly analytics dashboard featuring:
+This dashboard features a **minimalist, UX-focused design** with:
 
-- ✅ 8 fully designed screens
-- ✅ Feature-based architecture
-- ✅ Clean, professional UI with gradient aesthetics
-- ✅ Working charts and visualizations (Recharts)
-- ✅ Comprehensive sample data
-- ✅ Type-safe TypeScript
-- ✅ Responsive design
+- ✅ Clean, modern interface with soft shadows
+- ✅ Rounded cards with subtle hover effects
+- ✅ Light grey backgrounds with blue/purple accents
+- ✅ CSS Modules architecture for scalable styling
+- ✅ Comprehensive design system foundation
+- ✅ Single-user experience (Community features removed)
+- ✅ Space reserved for future Zia AI Assistant integration
+- ✅ Responsive across all devices
 
 ## 📁 Project Structure
 
 ```
-/src
-  /assets              # Static files (images, icons, fonts)
-  /components          # Shared, reusable UI components
-  /features            # Feature-based modules
-    /auth             # Authentication feature
-    /workspace        # Workspace management
-    /reports          # Report builder
-    /dashboard        # Dashboard views
-    /community        # Community hub
-    /profile          # Profile settings
-  /hooks               # Global custom hooks
-  /layouts             # Page layout wrappers
-  /pages               # Route components
-  /services            # API clients
-  /store               # State management
-  /styles              # Global styles
-  /utils               # Helper functions
-  /types               # TypeScript types
+/
+  /components          # Reusable UI components
+    /auth             # Authentication components (Login, SignUp, ForgotPassword)
+    /ui               # shadcn/ui component library
+    /Button           # Custom button with CSS Modules
+    /figma            # Figma integration utilities
+  /constants          # Configuration and mock data
+  /context            # React Context providers
+  /hooks              # Custom React hooks
+  /styles             # Global styles and CSS variables
+  /types              # TypeScript type definitions
+  /utils              # Helper functions
+  App.tsx             # Main application component
 ```
 
-See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for detailed information.
+## 🚀 Core Features
 
-## 🚀 Features
+### 🔐 Authentication
+- **Login** - Clean split-screen design
+- **Sign Up** - User registration flow
+- **Forgot Password** - Password recovery
 
-### Authentication
-- **Login** - Beautiful split-screen design with gradient branding
-- **Sign Up** - Complete registration flow
-- **Forgot Password** - Password reset with email confirmation
-
-### Workspaces
-- **Workspace Home** - Grid view of all workspaces with filtering
-- **Workspace Detail** - Detailed view with collapsible sidebar
+### 🏠 Workspace Management
+- **Workspace Home** - Grid view of all workspaces with filtering and search
+- **Workspace Screen** - Detailed workspace view with collapsible sidebar navigation
 - **Create/Edit** - Modal-based workspace management
-- **Favorites** - Star your favorite workspaces
+- **Data Import** - Import data from CSV, Excel, JSON sources
+- **Favorites & Organization** - Star and organize your workspaces
 
-### Reports & Analytics
-- **Report Builder** - Three-panel layout for creating charts
-- **Chart Types** - Line, Bar, Pie, Area charts (Recharts)
-- **Color Schemes** - 10 beautiful gradient color palettes
-- **Data Table** - Sortable, filterable data table view
+### 📊 Reports & Analytics
+- **Report Builder** - Three-panel split layout:
+  - Left: Chart type selection and configuration
+  - Center: Live chart preview with customization
+  - Right: Data settings and future AI assistant integration
+- **Chart Types** - Line, Bar, Pie, Area, Scatter charts (Recharts)
+- **Color Schemes** - Multiple gradient color palettes
+- **Data Table View** - Sortable, filterable, paginated data tables
 
-### Dashboards
-- **Dashboard View** - Multi-widget dashboard layout
-- **Edit Mode** - Drag-and-drop widget management
-- **Metric Cards** - Beautiful gradient metric displays
-- **Charts** - Interactive visualizations
+### 📈 Dashboard View (Latest Update)
+- **Per-Chart Insights Layout** - Revolutionary 50/50 split design:
+  - **Left 50%**: Chart visualization area
+  - **Right 50%**: Dedicated insight panel with AI-powered analysis
+- **Vertical Stacking** - One chart per row for focused analysis
+- **Interactive Chat** - Chat box at the bottom of each insight area for conversational analytics
+- **Multi-Widget Support** - Display multiple charts with their respective insights
+- **Edit Mode** - Add, remove, and configure dashboard widgets
+- **Export & Share** - Save and share dashboard configurations
 
-### Community
-- **Featured Workspaces** - Carousel of highlighted projects
-- **Browse & Search** - Filter by category, search, sort
-- **Like & Clone** - Engage with community workspaces
+### 👤 Profile & Settings
+- **Profile Management** - Edit personal information
+- **Account Settings** - Security and preferences
+- **Notifications** - Notification panel with real-time updates
+- **Theme Customization** - Ready for light/dark mode
 
-### Profile & Settings
-- **Profile** - Edit personal information
-- **Account** - Security and password management
-- **Notifications** - Preference toggles
-- **Billing** - Subscription management (Pro plan)
+### 📤 Collaboration & Sharing
+- **Share/Export Modal** - Collaborative features:
+  - Share via email or link
+  - Set permissions (view/edit)
+  - Export to PDF, PNG, or Excel
+  - Schedule automated reports
 
 ## 🎯 Design System
 
-### Colors
-- **Primary**: Indigo-Purple gradient (`#3B82F6` to `#8B5CF6`)
-- **Backgrounds**: Light slate (`#F9FAFB`)
-- **Cards**: White with soft shadows
-- **Accents**: Blue, Purple, Green, Orange, Red, Pink, Teal
+### CSS Modules Architecture
+- **Modular Styling** - Component-scoped CSS for better encapsulation
+- **Design Tokens** - Centralized variables in `/styles/variables.css`
+- **Global Styles** - Base styles and resets in `/styles/globals.css`
+- **Tailwind v4** - Utility-first CSS framework integration
 
-### Typography
-- **Headings**: Bold, modern sans-serif
-- **Body**: Clean, readable text
-- **Hierarchy**: 3xl → 2xl → xl → base
+### Color Palette
+- **Primary**: Blue (`#3B82F6`) to Purple (`#8B5CF6`) gradients
+- **Backgrounds**: Light grey (`#F9FAFB`, `#F3F4F6`)
+- **Cards**: White (`#FFFFFF`) with soft shadows
+- **Accents**: Blue, Purple, Green, Orange, Red, Pink, Teal, Indigo
+- **Text**: Dark slate for readability
 
-### Components
-- **Rounded**: 8px (lg) to 24px (2xl)
-- **Shadows**: Soft, layered shadows
-- **Transitions**: Smooth 200-300ms animations
-- **Spacing**: Consistent 16-24px padding
+### Visual Style
+- **Borders**: Rounded corners (8px - 16px)
+- **Shadows**: Soft, layered shadows for depth
+- **Hover Effects**: Smooth transitions and scale transforms
+- **Spacing**: Consistent padding and margins (16px - 24px)
+- **Typography**: Clean sans-serif hierarchy
 
 ## 📦 Tech Stack
 
-### Core
-- **React 18** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool
+### Core Technologies
+- **React 18** - Modern UI framework with hooks
+- **TypeScript** - Type-safe development
+- **Tailwind CSS v4** - Utility-first styling
 
-### Styling
-- **Tailwind CSS v4** - Utility-first CSS
+### UI & Visualization
+- **Recharts** - Interactive data visualizations
 - **Lucide React** - Icon library
-
-### Data Visualization
-- **Recharts** - Chart library
+- **shadcn/ui** - High-quality component library
+- **CSS Modules** - Scoped component styling
 
 ### State Management
-- React Context / Redux Toolkit (ready)
+- **React Context** - Global state (AppContext)
+- **Custom Hooks** - Business logic encapsulation
+  - `useWorkspace` - Workspace operations
+  - `useNotifications` - Notification management
 
-### HTTP Client
-- Axios (ready for API integration)
+### Data & Utilities
+- **Mock Data** - Comprehensive sample datasets
+- **TypeScript Types** - Full type definitions for all entities
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
@@ -136,144 +146,154 @@ npm run build
 npm run preview
 ```
 
-## 📱 Screens
+## 📱 Screens & User Flows
 
 ### 1. Authentication Flow
-- Login screen with social auth
+- Login with email/password
 - Sign up with validation
-- Password reset flow
+- Password reset functionality
+- Form validation and error handling
 
-### 2. Workspace Management
-- Home page with workspace grid
-- Detail view with sidebar navigation
-- Create/edit workspace modals
+### 2. Workspace Home
+- Grid layout with workspace cards
+- Search and filter capabilities
+- Quick actions (Create, Import, Star)
+- Empty states and loading indicators
 
-### 3. Report Builder
-- Left panel: Chart type & configuration
-- Center: Live chart preview
-- Right panel: AI assistant placeholder
+### 3. Workspace Detail
+- Collapsible sidebar with navigation
+- Overview dashboard
+- Reports listing
+- Data sources management
+- Settings panel
 
-### 4. Data Table
-- Sortable columns
-- Search & filter
-- Pagination
-- Status badges
+### 4. Report Builder
+- **Three-Panel Layout**:
+  - Configuration panel (chart type, data)
+  - Live preview with customization
+  - Data settings and AI assistant placeholder
+- Real-time chart updates
+- Color scheme selection
+- Save and export options
 
-### 5. Dashboard
-- 2x2 widget grid
-- Metric cards
-- Edit mode with drag-and-drop
-- Export functionality
+### 5. Dashboard View (New Layout)
+- **50/50 Split Per Chart**:
+  - Chart visualization (left 50%)
+  - Insight panel (right 50%)
+- Vertical stacking (one chart per row)
+- Chat interface at bottom of each insight
+- Add/remove widgets in edit mode
+- Full-screen mode for focused analysis
 
-### 6. Community Hub
-- Featured carousel
-- Category filtering
-- Like & clone actions
-- Search & sort
+### 6. Data Management
+- Import data modal (CSV, Excel, JSON)
+- Data processing with preview
+- Data transformation pipeline
+- Table view with sorting and filtering
 
-### 7. Profile Settings
-- Profile information
-- Account security
+### 7. Profile & Settings
+- Profile information editor
 - Notification preferences
-- Billing & subscription
+- Account security settings
 
 ## 🎨 Sample Data
 
-Included mock data for:
-- 6 workspaces with varied stats
-- 3 data sources (CSV, Excel, JSON)
-- 5 reports with different chart types
-- 2 dashboards
-- 12 months of revenue data
-- 9 community workspaces
-- 5 notifications
+The application includes comprehensive mock data:
+- **6 Workspaces** - With varied statistics and metadata
+- **5 Reports** - Different chart types and configurations
+- **2 Dashboards** - Pre-configured widget layouts
+- **Revenue Data** - 12 months of sample financial data
+- **User Data** - Sample profiles and activity
+- **Notifications** - Various notification types
 
 ## 📚 Architecture Highlights
 
-### Feature-Based Organization
-Each feature is self-contained with:
-- Components (UI)
-- Services (API calls)
-- Hooks (Logic)
-- Types (TypeScript)
+### Component-Based Design
+- **Reusable Components** - Shared UI components in `/components`
+- **Feature Isolation** - Self-contained feature modules
+- **Type Safety** - Full TypeScript coverage
+- **CSS Modules** - Scoped styling per component
 
-### Benefits
-- **Scalability** - Easy to add new features
-- **Maintainability** - Related code grouped together
-- **Testability** - Features tested in isolation
-- **Collaboration** - Multiple developers can work simultaneously
-
-### Code Structure
-```tsx
-// Feature structure example
-/features/workspace
-  /components
-    WorkspaceCard.tsx
-    WorkspaceGrid.tsx
-  /services
-    workspaceService.ts
-  /hooks
-    useWorkspaces.ts
+### State Management Strategy
+```
+User Action → Component → Hook → Context → Update → Re-render
 ```
 
-## 🔄 Data Flow
-
+### Styling Architecture
 ```
-User Action → Component → Hook → Service → API
-                ↑                              ↓
-                └──────── State Update ────────┘
+Global Variables (variables.css)
+        ↓
+Base Styles (globals.css)
+        ↓
+Tailwind Utilities
+        ↓
+CSS Modules (Component-specific)
 ```
 
 ## 🎯 Best Practices
 
-### Component Structure
-1. Imports
-2. Types/Interfaces
-3. Component function
-4. Hooks
-5. Event handlers
-6. Render JSX
+### Code Organization
+- **Components**: One component per file, PascalCase naming
+- **Hooks**: Custom hooks prefixed with `use`, in `/hooks` directory
+- **Types**: Centralized in `/types/index.ts`
+- **Constants**: Configuration in `/constants/config.ts`
 
-### Naming Conventions
-- **Components**: PascalCase (`WorkspaceCard.tsx`)
-- **Hooks**: camelCase with `use` prefix (`useWorkspaces.ts`)
-- **Services**: camelCase with `Service` suffix
-- **Constants**: UPPER_SNAKE_CASE
+### Styling Guidelines
+- **Tailwind First**: Use utility classes for layout and spacing
+- **CSS Modules**: For component-specific styles
+- **No Inline Styles**: Maintain consistency with design system
+- **Responsive**: Mobile-first approach with breakpoints
 
-### Styling
-- Tailwind utility classes
-- Mobile-first approach
-- Consistent spacing
-- Gradient accents
+### TypeScript Conventions
+- **Explicit Types**: Define interfaces for all props and data
+- **Avoid `any`**: Use proper typing throughout
+- **Type Guards**: Validate data shapes when needed
 
-## 🚧 Next Steps (Backend Integration)
+## 🔮 Future Enhancements
 
-The app is **ready for backend integration**:
+### Zia AI Assistant Integration
+- **Conversational Analytics** - Chat with your data
+- **Smart Insights** - AI-generated observations per chart
+- **Recommendations** - Suggested visualizations and analyses
+- **Natural Language Queries** - Ask questions in plain English
 
-1. **API Setup**
-   - Configure Axios base URL
-   - Add authentication interceptors
-   - Handle error responses
+### Backend Integration Roadmap
+1. **API Layer**
+   - RESTful API integration
+   - Authentication with JWT
+   - Real-time updates via WebSockets
 
-2. **Service Implementation**
-   - Replace mock data with real API calls
-   - Implement proper error handling
-   - Add loading states
+2. **Data Persistence**
+   - User accounts and workspaces
+   - Report configurations
+   - Uploaded datasets
+   - Collaborative features
 
-3. **State Management**
-   - Set up Redux/Context
-   - Add caching strategies
-   - Implement optimistic updates
+3. **Advanced Features**
+   - Real-time collaboration
+   - Automated insights
+   - Scheduled reports
+   - Advanced data transformations
 
-4. **Real-time Features**
-   - WebSocket integration
-   - Live notifications
-   - Collaborative editing
+4. **Performance**
+   - Lazy loading for large datasets
+   - Caching strategies
+   - Optimistic UI updates
 
-5. **File Uploads**
-   - Implement file upload
-   - Parse CSV/Excel/JSON
-   - Store in cloud storage
+## 🧹 Recent Changes
+
+### Architecture Refactor
+- ✅ Migrated to CSS Modules architecture
+- ✅ Established comprehensive design system
+- ✅ Removed community and public features for single-user focus
+- ✅ Fixed Login component import paths
+
+### Dashboard Redesign
+- ✅ Replaced AI chat sidebar with per-chart insights
+- ✅ Implemented 50/50 split layout (Chart + Insights)
+- ✅ Added vertical stacking (one chart per row)
+- ✅ Added chat box at bottom of each insight area
+- ✅ Improved focus on individual chart analysis
 
 ## 📄 License
 
@@ -281,34 +301,25 @@ This project is proprietary and confidential.
 
 ## 👥 Contributors
 
-Built with ❤️ for modern analytics
+Built with ❤️ for modern analytics and AI-powered insights
 
 ---
 
-## 📖 Documentation
+## ✨ Key Highlights
 
-- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) - Detailed folder structure
-- [REDESIGN_OVERVIEW.md](REDESIGN_OVERVIEW.md) - Complete redesign details
-
-## ✨ Features at a Glance
-
-- ✅ Modern gradient UI design
-- ✅ 8 interconnected screens
-- ✅ Feature-based architecture
+- ✅ Clean, minimalist design with UX focus
+- ✅ CSS Modules architecture for scalability
+- ✅ Comprehensive design system
+- ✅ Single-user focused experience
+- ✅ Per-chart insights with chat interface
+- ✅ Responsive across all devices
 - ✅ TypeScript type safety
-- ✅ Responsive layouts
-- ✅ Working charts (4 types)
-- ✅ 10 color schemes
-- ✅ Sample data included
-- ✅ Modal dialogs
-- ✅ Notification system
-- ✅ User authentication flow
-- ✅ Profile settings
-- ✅ Community features
-- ✅ Production-ready code
+- ✅ Production-ready code structure
+- ✅ Ready for Zia AI Assistant integration
+- ✅ Modular, maintainable codebase
 
 ---
 
-**Ready to build beautiful analytics dashboards!** 🚀
+**Ready to build intelligent analytics dashboards!** 🚀
 
-Navigate through the app starting from the Login screen to experience the complete redesign.
+Start at the Login screen to experience the complete Vizly dashboard.
