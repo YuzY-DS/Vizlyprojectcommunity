@@ -42,7 +42,7 @@ export default function Login({ onLogin, onNavigateToSignUp, onNavigateToForgot,
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <div className={`min-h-screen flex items-center justify-center p-4 bg-[#F8FAFC] dark:bg-[#0A192F] relative overflow-hidden transition-colors duration-500 ${darkMode ? 'dark' : ''}`}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400/20 dark:bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
@@ -73,9 +73,8 @@ export default function Login({ onLogin, onNavigateToSignUp, onNavigateToForgot,
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
             </div>
-            <h1 className="text-gray-900 dark:text-white mb-2 flex items-center justify-center gap-2">
+            <h1 className="text-gray-900 dark:text-white mb-1 flex items-center justify-center gap-2 text-2xl font-bold">
               Welcome Back
-              <Sparkles className="w-5 h-5 text-yellow-500 animate-pulse" />
             </h1>
             <p className="text-gray-600 dark:text-gray-400">Log in to your Vizly account</p>
           </div>
@@ -168,10 +167,10 @@ export default function Login({ onLogin, onNavigateToSignUp, onNavigateToForgot,
             {/* Login Button */}
             <button
               type="submit"
-              className="w-full py-3.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white rounded-xl font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
+              className="w-full py-3.5 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white rounded-xl font-medium  hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
             >
               <span className="relative z-10">Log In</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </form>
 
